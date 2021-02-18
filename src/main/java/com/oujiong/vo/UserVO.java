@@ -1,5 +1,6 @@
 package com.oujiong.vo;
 
+import com.oujiong.plugin.AutoId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

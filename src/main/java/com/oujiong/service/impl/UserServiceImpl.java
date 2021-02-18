@@ -3,6 +3,7 @@ package com.oujiong.service.impl;
 import com.google.common.collect.Lists;
 import com.oujiong.entity.TabUser;
 import com.oujiong.mapper.UserMapper;
+import com.oujiong.plugin.SnowIdUtils;
 import com.oujiong.service.UserService;
 import com.oujiong.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,7 @@ public class UserServiceImpl implements UserService {
      */
     private TabUser build(UserVO vo) {
         TabUser tabUser = new TabUser();
+        tabUser.setId(SnowIdUtils.uniqueLong());
         tabUser.setName(vo.getName());
         tabUser.setSex(vo.getSex());
         tabUser.setAge(vo.getAge());

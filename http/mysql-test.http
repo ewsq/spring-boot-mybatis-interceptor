@@ -1,0 +1,10 @@
+
+### 查询时间段内的记录总数
+POST http://{{host}}/save-foreach-user
+Content-Type: application/json
+
+{
+  "tableName": "T_HISTORY",
+  "stamp_start": "2020-11-01 14:58:23",
+  "stamp_end": "2020-11-01 15:58:23"
+}

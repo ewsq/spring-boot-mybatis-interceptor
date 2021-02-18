@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    mysql-server:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:23306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+      username: ENC(zyY3UocdEfdjC6oihBWwaQ==)
+      password: ENC(ZOumEoKyEnRVA2To/TupgrhM1y5/poy3)
+      type: com.zaxxer.hikari.HikariDataSource      # Hikari连接池的设置
+      minimum-idle: 5                 #最小连接
+      maximum-pool-size: 15        #最大连接
+      auto-commit: true        #自动提交
+      idle-timeout: 30000        #最大空闲时常
+      pool-name: MySQLHikariCP        #连接池名
+      max-lifetime: 1800000        #最大生命周期
+      connection-timeout: 30000        #连接超时时间
+      connection-test-query: SELECT 1  #心跳检测
+
+#mybatis
+mybatis:
+  typeAliasesPackage: com.oujiong.entity
+  configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl     #打印sql
+    call-setters-on-nulls: true  #设置查询字段为空时，也返回该字段
+    map-underscore-to-camel-case: true
